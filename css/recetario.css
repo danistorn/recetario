@@ -1,0 +1,220 @@
+:root {
+    --linea1: green;
+    --linea2: purple;
+    --linea3: rgb(202, 40, 40);
+    --linea4: cadetblue;
+    --header: silver;
+    
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+
+
+/*////////////////////////////////////////////////////////////////*/
+
+
+/* header, .logo, nav {
+    display: flex;
+} */
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: var(--header);
+    align-items: center;
+    min-height: 40px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+
+.logo img{
+    height: 30px;
+    padding-right: 10px;
+    margin: auto 0;
+}
+
+.logo h2 {  
+    margin: 5px;
+}
+
+
+
+nav, li a  {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: black;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: white;
+}
+
+
+.logo {
+    display: flex;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+.titulo{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:10px;
+}
+
+
+/* @media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+} */
+
+
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.up-pane {
+    padding: 0 100px;
+}
+
+.ingredientes-container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    
+    /* display: flex;
+    justify-content: space-evenly; */
+    padding: 20px 10px;
+    /* display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between; */
+}
+
+.ingredientes {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0 15px;   
+    /* display: flex;
+    flex-direction: umn; */
+}
+
+
+.ingredientes h2 {
+    margin: 5px;
+}
+
+
+hr {border: 0; 
+    height: 0; 
+    width: 100%;
+}
+
+.linea1{
+    background-image: linear-gradient(90deg, var(--linea1), transparent);
+    border: 0;
+    height: 7px;
+    border-radius: 3px;
+}
+
+.linea2{
+    background-image: linear-gradient(90deg, var(--linea2), transparent);
+    border: 0;
+    height: 7px;
+    border-radius: 3px;
+}
+
+.linea3{
+    background-image: linear-gradient(90deg, var(--linea3), transparent);
+    border: 0;
+    height: 7px;
+    border-radius: 3px;
+
+    /* box-shadow: 0 1px 6px 1px rgb(53, 53, 238); */
+}
+
+.linea4{
+    background-image: linear-gradient(90deg, /* rgb(8, 109, 156) */ var(--linea4), transparent);
+    border: 0;
+    height: 7px;
+    border-radius: 3px;
+
+
+}
+
+
+
+.ingrediente{
+    padding: 3px;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+.recetas-container {
+    /* margin: 25px auto; Arriba y abajo nada, en los costados se va a ajustar a igual distancia. */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+    place-content: center;
+    margin: 20px 80px 5px; /*arriba, a los costados, abajo*/
+    font-family: sans-serif;
+    gap: 1.5rem;
+}
+
+/* auto-fill (dejan las card con su tamaño) o auto-fit (alarga las card para que ocupen el espacio)→ llena como puede el grid */
+/* minmax → El maximo, como es un fraccion, coje todo el espacio disponible.
+Si el minimo que le ponemos es más grande que la pantalla más chica qu existe, ocurrirá overflow. Para eso usamos otra funcion.. */
+
+
+
+
+.card {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+
+.card__img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+
+.receta-info, h2 {
+    padding: 5px;
+}
